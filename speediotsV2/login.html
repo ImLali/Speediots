@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Login — Speediots</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">SPEEDIOTS</div>
+        <nav class="main-nav">
+          <a href="index.html">Home</a>
+          <a href="rules.html">Rules</a>
+          <a href="schedule.html">Schedule</a>
+          <a href="news.html">News</a>
+          <a href="supporters.html">Supporters</a>
+            <div class="classes-link" style="display:inline-block;">
+              Classes
+              <div class="mega-menu">
+                <a href="gt3.html">GT3</a>
+                <a href="nascar.html">Nascar</a>
+                <a href="gt4.html">GT4</a>
+                <a href="gt2.html">GT2</a>
+              </div>
+            </div>
+          <a href="register.html" class="btn primary">Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h1>Login</h1>
+      <div class="form-wrap">
+        <form id="login-form">
+          <label for="ident">Username or Email</label>
+          <input id="ident" name="ident" type="text" placeholder="username or email" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="password" required>
+            <br>
+          <button type="submit" class="btn primary">Login</button>
+          <div id="login-msg" style="display:none;margin-top:.8rem;padding:.6rem;border-radius:6px"></div>
+        </form>
+        <p style="margin-top:1rem">No account? <a href="register.html">Create one</a>.</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Speediots Racing</div>
+        <div class="footer-links"><a href="index.html">Home</a></div>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+    (function(){
+      const form = document.getElementById('login-form');
+      if(!form) return;
+      form.addEventListener('submit', (ev)=>{
+        ev.preventDefault();
+        const ident = document.getElementById('ident').value.trim();
+        const pass = document.getElementById('password').value;
+        const res = window._speediots && window._speediots.auth && window._speediots.auth.loginAccount(ident, pass);
+        const msg = document.getElementById('login-msg'); msg.style.display='block';
+        if(res && res.ok){ msg.textContent='Logged in. Redirecting...'; setTimeout(()=>location.href='index.html',600); }
+        else { msg.textContent = (res && res.error) || 'Login failed'; }
+      });
+    })();
+    </script>
+  </body>
+</html>
