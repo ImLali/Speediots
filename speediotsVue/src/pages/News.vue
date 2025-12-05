@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="form-wrap reveal">
       <h1>News</h1>
       <article>

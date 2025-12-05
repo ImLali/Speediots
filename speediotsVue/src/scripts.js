@@ -1,8 +1,3 @@
-function setYear(){
-  const y = new Date().getFullYear();
-  const el = document.getElementById('year'); if(el) el.textContent = y;
-}
-
 function highlightNav(){
   const links = document.querySelectorAll('.main-nav a');
   links.forEach(a=>{
@@ -32,8 +27,20 @@ function setupReveal(){
       }
     });
   },{threshold:0.12});
-  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+  
+  // Observe all reveal elements and trigger initial check
+  const reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(el => {
+    obs.observe(el);
+    // Manually trigger intersection check for elements already in viewport
+    if(el.getBoundingClientRect().top < window.innerHeight){
+      el.classList.add('in-view');
+    }
+  });
 }
+
+// Export globally so router can call it
+window.setupReveal = setupReveal;
 
 function setupRegistration(){
   const form = document.getElementById('register-form');
@@ -136,7 +143,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
   const loadBtn = document.getElementById('load-video'); if(loadBtn) loadBtn.addEventListener('click', loadVideoFromInput);
 });
 
-window._speediots = { setupRegistration, loadVideoFromInput };
+window._speediots = { setupRegistration, loadVideoFromInput, setupReveal };
 
 // expose auth helpers
 window._speediots.auth = { registerAccount, loginAccount, getCurrentUser, logout };

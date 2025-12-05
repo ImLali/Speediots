@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div class="classes-nav">
       <div class="classes-inner">
         <div class="classes-link">Classes

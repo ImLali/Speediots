@@ -3,7 +3,6 @@ import { createWebHistory, createRouter } from 'vue-router';
 import './scripts.js';
 import './style.css';
 import App from './App.vue';
-
 const HomeView = () => import('./pages/Home.vue');
 const AboutView = () => import('./pages/About.vue');
 const Gt2View = () => import('./pages/Gt2.vue');
@@ -37,6 +36,11 @@ const routes = [
 export const router = createRouter({
   history: createWebHistory(),
   routes,
+});
+
+// Re-run reveal animations on each route change
+router.afterEach(() => {
+  if(window.setupReveal) setupReveal();
 });
 
 createApp(App).use(router).mount('#app');

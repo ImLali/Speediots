@@ -3,17 +3,18 @@
 
 <template>
   <section class="hero">
-      <div class="hero-bg" style="background-image: url(1190091.jpg);"></div>
-      <div class="hero-overlay container reveal">
-        <h1>Welcome to Speediots Racing</h1>
-        <p class="intro">Fast tracks, strict rules, and loud engines — join the race or watch the action.</p>
-        <div class="hero-actions">
-          <a href="rules.html" class="btn">Racing Rules</a>
-          <a href="https://discord.gg/" target="_blank" class="btn secondary">Discord</a>
-          <a href="register.html" class="btn primary">Register Now</a>
-        </div>
+    <div class="hero-bg" style="background-image: url(/src/pictures/1190091.jpg)"></div>
+    <div class="hero-overlay reveal">
+      <h1>Welcome to Speediots Racing</h1>
+      <p class="intro">Fast tracks, strict rules, and loud engines — join the race or watch the action.</p>
+      <div class="hero-actions">
+        <RouterLink to="/rules" class="btn">Racing Rules</RouterLink>
+        <a href="https://discord.gg/" target="_blank" class="btn secondary">Discord</a>
+        <RouterLink to="/register" class="btn primary">Register Now</RouterLink>
       </div>
-    </section>
+    </div>
+  </section>
+  <section class="container">
     <section class="sponsors reveal">
       <h2>Sponsors</h2>
       <div class="sponsor-logos">
@@ -63,7 +64,7 @@
         </article>
       </div>
       <div style="margin-top:1rem">
-        <a href="news.html" class="btn primary">Read more news</a>
+        <RouterLink to="/news" class="btn primary">Read more news</RouterLink>
       </div>
     </section>
 
@@ -76,6 +77,7 @@
         <a href="https://discord.gg/" target="_blank">💬 Discord</a>
       </div>
     </section>
+  </section>
 </template>
 
 <style scoped>

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <main class="container main-content">
       <h1>Supporters</h1>
       <p class="intro">These organisations help make our events possible — thank you!</p>

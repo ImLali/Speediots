@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <main class="container">
       <h1>Login</h1>
       <div class="form-wrap">
