@@ -1,29 +1,14 @@
 <script setup>
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="logo">SPEEDIOTS</div>
-      <nav class="main-nav">
-        <RouterLink to="/">Go to Home</RouterLink>
-        <RouterLink to="/about">Go to About</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <Header />
   <main class="container main-content">
     <RouterView />
   </main>
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Speediots Racing</div>
-      <div class="footer-links">
-        <a href="rules.html">Rules</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="register.html">Register</a>
-      </div>
-    </div>
-  </footer>
+  <Footer />
 </template>
 
 <style scoped>
