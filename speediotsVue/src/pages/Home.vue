@@ -18,9 +18,8 @@
     <section class="sponsors reveal">
       <h2>Sponsors</h2>
       <div class="sponsor-logos">
-        <img src="https://picsum.photos/seed/s1/200/80" alt="sponsor1">
-        <img src="https://picsum.photos/seed/s2/200/80" alt="sponsor2">
-        <img src="https://picsum.photos/seed/s3/200/80" alt="sponsor3">
+        <img src="/src/pictures/TR.png" alt="sponsor1">
+        <img src="/src/pictures/Rogue.png" alt="sponsor2">
       </div>
     </section>
     <section class="gallery reveal">

@@ -149,7 +149,7 @@ body{
   justify-content:center;
 }
 .sponsor-logos img{
-  height:90px;
+  height:380px;
   object-fit:cover;
   border-radius:6px;
   background:var(--glass);

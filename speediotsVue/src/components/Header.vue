@@ -7,7 +7,7 @@
         <RouterLink to="/rules">Rules</RouterLink>
         <RouterLink to="/schedule">Schedule</RouterLink>
         <RouterLink to="/news">News</RouterLink>
-        <RouterLink to="/supporters">Supporters</RouterLink>
+        <RouterLink to="/supporters">Sponsor</RouterLink>
         <div class="classes-link" style="display:inline-block;">
           Classes
           <div class="mega-menu">
