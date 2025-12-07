@@ -40,3 +40,28 @@
     </div>
   </header>
 </template>
+
+<style scoped>
+  .site-header{
+    backdrop-filter:blur(4px);
+    position:sticky;
+    top:0;
+    z-index:20;
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:.05rem 0;
+  }
+  .logo{
+    font-weight:900;
+    font-size:1.55rem;
+    color:var(--accent-2);
+    letter-spacing:1px;
+    display:flex;
+    align-items:center;
+    height:1.5rem;
+    line-height:.9;
+  }
+</style>

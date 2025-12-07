@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="form-wrap reveal">
+    <div class="form-wrap">
       <h1>News</h1>
       <article>
         <h2><a href="/news-article">Race day announced — join us for a full weekend</a></h2>
