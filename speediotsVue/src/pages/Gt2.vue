@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <main class="container main-content reveal">
+    <main class="container main-content">
       <h1>GT2 Class</h1>
       <p class="intro">GT2 class information and upcoming GT2 races.</p>
     </main>

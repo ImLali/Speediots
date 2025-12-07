@@ -278,3 +278,182 @@ button[type=submit]{margin-top:1rem}
   html{font-size:16px}
   .hero-overlay{padding:2.2rem 1rem}
 }
+
+/* Hide checkbox visually */
+.nav-toggle {
+  display: none;
+}
+
+/* Hamburger icon */
+.nav-toggle-label {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle-label span {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+/* Animation: cross when open */
+.nav-toggle:checked + .nav-toggle-label span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle:checked + .nav-toggle-label span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle:checked + .nav-toggle-label span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 915px) {
+
+  /* show hamburger */
+  .nav-toggle-label {
+    display: flex;
+  }
+
+  /* nav becomes hidden by default */
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: var(--card);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* when checkbox checked → show menu */
+  .nav-toggle:checked ~ .main-nav {
+    max-height: 600px;
+    opacity: 1;
+    padding: 1rem;
+  }
+
+  .main-nav a,
+  .classes-link {
+    margin-left: 0;
+    padding: 0.55rem 0;
+  }
+
+  /* CLASSES submenu (mobile only) */
+  .classes-link .mega-menu {
+    position: relative;
+    display: block;
+    background: transparent;
+    padding: 0;
+    margin-top: .3rem;
+    border-left: 2px solid var(--accent-2);
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease;
+  }
+
+  /* tap-to-open using :focus-within */
+  .classes-link:focus-within .mega-menu {
+    max-height: 300px;
+  }
+
+  /* remove desktop hover */
+  .classes-link:hover .mega-menu {
+    display: block;
+  }
+}
+
+.mega-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  min-width: 320px;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+.classes-link:hover .mega-menu {
+  display: block;
+}
+
+/* Desktop title visible, mobile toggle hidden */
+.classes-toggle,
+.classes-toggle-label {
+  display: none;
+}
+
+.classes-desktop-title {
+  display: inline-block;
+  padding: .45rem .6rem;
+  cursor: pointer;
+}
+
+@media (max-width: 915px) {
+
+  /* Hide the desktop "Classes" text */
+  .classes-desktop-title {
+    display: none;
+  }
+
+  /* Show the mobile toggle */
+  .classes-toggle-label {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    cursor: pointer;
+    padding: .5rem 0;
+    font-weight: 600;
+    user-select: none;
+  }
+
+  .classes-toggle {
+    display: none; /* hidden checkbox */
+  }
+
+  .arrow {
+    transition: transform .3s ease;
+  }
+
+  /* Rotate arrow when open */
+  .classes-toggle:checked + .classes-toggle-label .arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Mobile submenu animation */
+  .classes-link .mega-menu {
+    position: relative;
+    display: block;
+    padding-left: .8rem;
+    border-left: 2px solid var(--accent-2);
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .35s ease, opacity .35s ease;
+  }
+
+  /* When checkbox checked → submenu open */
+  .classes-toggle:checked ~ .mega-menu {
+    max-height: 300px;
+    opacity: 1;
+  }
+
+  /* Disable desktop hover on mobile */
+  .classes-link:hover .mega-menu {
+    display: block;
+  }
+}
