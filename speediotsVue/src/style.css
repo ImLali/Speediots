@@ -255,7 +255,7 @@ body{
 /* Pages */
 .form-wrap{max-width:680px;margin:1rem auto;background:var(--card);padding:1.25rem;border-radius:8px;text-align:center}
 label{display:block;margin:0.6rem 0 0.3rem;font-size:1rem;color:var(--muted)}
-input[type=text],input[type=email],select,textarea{width:100%;padding:.65rem;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+input[type=text],input[type=email],input[type=password],select,textarea{width:100%;padding:.65rem;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
 button[type=submit]{margin-top:1rem}
 
 /* follow icons */
@@ -532,3 +532,4 @@ button[type=submit]{margin-top:1rem}
   border: none;
   display: block;
 }
+

@@ -17,4 +17,3 @@
     </main>
   </div>
 </template>
-        <a href="/register" class="btn primary">Register</a>

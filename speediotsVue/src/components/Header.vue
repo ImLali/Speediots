@@ -32,10 +32,10 @@
             <RouterLink to="/wec">LMU</RouterLink>
           </div>
         </div>
-
-
-
-        <RouterLink to="/register" class="btn primary">Register</RouterLink>
+        <div class="auth-links">
+          <RouterLink to="/login" class="nav-login">Log in</RouterLink>
+          <RouterLink to="/register" class="btn primary">Register</RouterLink>
+        </div>
       </nav>
     </div>
   </header>
