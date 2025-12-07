@@ -28,8 +28,8 @@
           <div class="mega-menu">
             <RouterLink to="/gt3">GT3</RouterLink>
             <RouterLink to="/nascar">Nascar</RouterLink>
-            <RouterLink to="/gt4">GT4</RouterLink>
-            <RouterLink to="/gt2">GT2</RouterLink>
+            <RouterLink to="/gt4">GT2&4</RouterLink>
+            <RouterLink to="/wec">LMU</RouterLink>
           </div>
         </div>
 

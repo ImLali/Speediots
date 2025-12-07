@@ -122,6 +122,7 @@ body{
   text-transform:uppercase;
   letter-spacing:1px;
 }
+
 .intro{
   color:var(--muted);
   max-width:820px;
@@ -311,7 +312,7 @@ button[type=submit]{margin-top:1rem}
   transform: translateY(-8px) rotate(-45deg);
 }
 
-@media (max-width: 915px) {
+@media (max-width: 940px) {
 
   /* show hamburger */
   .nav-toggle-label {
@@ -456,4 +457,60 @@ button[type=submit]{margin-top:1rem}
   .classes-link:hover .mega-menu {
     display: block;
   }
+}
+
+.weapon-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.weapon-title {
+  font-size: 2rem;
+  margin-bottom: .4rem;
+}
+
+.weapon-subtitle {
+  color: var(--muted);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: left; /* also shifted left */
+}
+
+/* GRID LAYOUT */
+.weapon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* CARD STYLE */
+.weapon-card {
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  transition: transform .25s ease;
+}
+
+.weapon-card:hover {
+  transform: translateY(-6px);
+}
+
+.weapon-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.weapon-card h3 {
+  margin: 1rem 0 .5rem;
+  font-size: 1.3rem;
+}
+
+.weapon-card p {
+  padding: 0 1rem;
+  color: var(--muted);
 }

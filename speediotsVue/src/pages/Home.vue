@@ -9,7 +9,7 @@
       <p class="intro">Fast tracks, strict rules, and loud engines — join the race or watch the action.</p>
       <div class="hero-actions">
         <RouterLink to="/rules" class="btn">Racing Rules</RouterLink>
-        <a href="https://discord.gg/" target="_blank" class="btn secondary">Discord</a>
+        <a href="https://discord.gg/qwN5NfphbQ" target="_blank" class="btn secondary">Discord</a>
         <RouterLink to="/register" class="btn primary">Register Now</RouterLink>
       </div>
     </div>
@@ -73,7 +73,7 @@
         <a href="https://www.youtube.com/@SPEEDIOTS" target="_blank">📺 YouTube</a>
         <a href="#" target="_blank">📘 Facebook</a>
         <a href="#" target="_blank">🎵 TikTok</a>
-        <a href="https://discord.gg/" target="_blank">💬 Discord</a>
+        <a href="https://discord.gg/qwN5NfphbQ" target="_blank">💬 Discord</a>
       </div>
     </section>
   </section>

@@ -5,7 +5,7 @@ import './style.css';
 import App from './App.vue';
 const HomeView = () => import('./pages/Home.vue');
 const AboutView = () => import('./pages/About.vue');
-const Gt2View = () => import('./pages/Gt2.vue');
+const WecView = () => import('./pages/wec.vue');
 const Gt3View = () => import('./pages/Gt3.vue');
 const Gt4View = () => import('./pages/Gt4.vue');
 const LoginView = () => import('./pages/Login.vue');
@@ -20,7 +20,7 @@ const SupportersView = () => import('./pages/Supporters.vue');
 const routes = [
   { path: '/', component: HomeView },
   { path: '/about', component: AboutView },
-  { path: '/gt2', component: Gt2View },
+  { path: '/wec', component: WecView },
   { path: '/gt3', component: Gt3View },
   { path: '/gt4', component: Gt4View },
   { path: '/login', component: LoginView },
