@@ -1,6 +1,5 @@
 import { createApp } from 'vue';
 import { createWebHistory, createRouter } from 'vue-router';
-import './scripts.js';
 import './style.css';
 import App from './App.vue';
 const HomeView = () => import('./pages/Home.vue');
@@ -30,17 +29,12 @@ const routes = [
   { path: '/register', component: RegisterView },
   { path: '/rules', component: RulesView },
   { path: '/schedule', component: ScheduleView },
-  { path: '/supporters', component: SupportersView },
+  { path: '/supporters', component: SupportersView }
 ];
 
 export const router = createRouter({
   history: createWebHistory(),
-  routes,
-});
-
-// Re-run reveal animations on each route change
-router.afterEach(() => {
-  if(window.setupReveal) setupReveal();
+  routes
 });
 
 createApp(App).use(router).mount('#app');

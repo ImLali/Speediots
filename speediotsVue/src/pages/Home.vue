@@ -4,7 +4,7 @@
 <template>
   <section class="hero">
     <div class="hero-bg" style="background-image: url(/src/pictures/1190091.jpg)"></div>
-    <div class="hero-overlay reveal">
+    <div class="hero-overlay">
       <h1>Welcome to Speediots Racing</h1>
       <p class="intro">Fast tracks, strict rules, and loud engines — join the race or watch the action.</p>
       <div class="hero-actions">
@@ -15,14 +15,14 @@
     </div>
   </section>
   <section class="container">
-    <section class="sponsors reveal">
+    <section class="sponsors">
       <h2>Sponsors</h2>
       <div class="sponsor-logos">
         <img src="/src/pictures/TR.png" alt="sponsor1">
         <img src="/src/pictures/Rogue.png" alt="sponsor2">
       </div>
     </section>
-    <section class="gallery reveal">
+    <section class="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
         <div class="card"><img src="https://picsum.photos/seed/g1/600/400" alt="race1"></div>
@@ -30,7 +30,7 @@
         <div class="card"><img src="https://picsum.photos/seed/g3/600/400" alt="race3"></div>
       </div>
     </section>
-    <section class="videos-section reveal">
+    <section class="videos-section">
       <h2>Videos</h2>
       <p>Paste a video URL or ID from the official SPEEDIOTS YouTube channel and watch here.</p>
       <div class="video-grid">
@@ -46,7 +46,7 @@
       </div>
     </section>
 
-    <section class="news reveal">
+    <section class="news">
       <h2>Latest News</h2>
       <div class="news-grid">
         <article class="card">
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="follow reveal">
+    <section class="follow">
       <h2>Follow us on other platforms:</h2>
       <div class="follow-list">
         <a href="https://www.youtube.com/@SPEEDIOTS" target="_blank">📺 YouTube</a>
