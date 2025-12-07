@@ -1,10 +1,46 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using API.Data;
 
-// Add services to the container.
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAuthorizationBuilder()
+  .AddPolicy("admin", policy => policy.RequireRole("Admin"));
+
+var connectionString = builder.Configuration.GetConnectionString("Default");
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+  options.UseNpgsql(connectionString)
+  .ReplaceService<IHistoryRepository, NonLockingNpgsqlHistoryRepository>());
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+
+// accountEndpoints.MapIdentityApi<IdentityUser>(); - ezekhez az endpointokhoz szükséges service-eket adja hozzá a DI-hoz
+builder.Services.AddIdentityApiEndpoints<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+builder.Services.AddAuthorization();
+
+var allowSpecificOrigins = "_allowSpecificOrigins";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(allowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("*")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                      });
+});
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+app.UseCors(allowSpecificOrigins);
+
+var accountEndpoints = app.MapGroup("Account").WithTags("Account");
+accountEndpoints.MapIdentityApi<IdentityUser>();
 
 var summaries = new[]
 {
@@ -23,6 +59,21 @@ app.MapGet("/weatherforecast", () =>
         .ToArray();
     return forecast;
 });
+
+// Auto migration
+using var scope = app.Services.CreateScope();
+using var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+var migrations = await dbContext.Database.GetPendingMigrationsAsync();
+if (migrations.Any())
+    await dbContext.Database.MigrateAsync();
+
+var roles = dbContext.Set<IdentityRole>();
+if (!await roles.AnyAsync(role => role.Name == "Admin"))
+{
+    roles.Add(new IdentityRole { Name = "Admin", NormalizedName = "ADMIN" });
+
+    await dbContext.SaveChangesAsync();
+}
 
 app.Run();
 
