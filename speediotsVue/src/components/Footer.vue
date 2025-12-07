@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© 2025 Speediots Racing</div>
+      <div>© 2025 Speediots Racing - No rights reserved</div>
       <div class="footer-links">
         <RouterLink to="/">Home</RouterLink>
       </div>
