@@ -1,8 +1,6 @@
 ﻿using API.Data;
-
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Migrations;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,12 +9,8 @@ builder.Services.AddAuthorizationBuilder()
 
 var connectionString = builder.Configuration.GetConnectionString("Default");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-  options.UseNpgsql(connectionString)
-  .ReplaceService<IHistoryRepository, NonLockingNpgsqlHistoryRepository>());
+  options.UseAzureSql(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
-
-// accountEndpoints.MapIdentityApi<IdentityUser>(); - ezekhez az endpointokhoz szükséges service-eket adja hozzá a DI-hoz
 builder.Services.AddIdentityApiEndpoints<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
