@@ -19,4 +19,6 @@ public class Race
 
     [Column(TypeName = "smalldatetime")]
     public DateTime Date { get; set; }
+
+    public ICollection<RaceUser> RaceUsers { get; set; } = new List<RaceUser>();
 }

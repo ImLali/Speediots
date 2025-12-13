@@ -1,4 +1,5 @@
 ﻿using API.Data;
+using API.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,30 +30,17 @@ builder.Services.AddCors(options =>
                       });
 });
 
+builder.Services.AddTransient<IRaceService, RaceService>();
+
 var app = builder.Build();
 
 app.UseCors(allowSpecificOrigins);
 
-var accountEndpoints = app.MapGroup("Account").WithTags("Account");
+var accountEndpoints = app.MapGroup("Account");
 accountEndpoints.MapIdentityApi<IdentityUser>();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-});
+var raceEndpoints = app.MapGroup("Race");
+app.MapGet("list", async (IRaceService raceService) => await raceService.GetAllRacesAsync());
 
 // Auto migration
 using var scope = app.Services.CreateScope();
