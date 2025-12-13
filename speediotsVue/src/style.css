@@ -26,6 +26,7 @@ body {
   padding: 1rem;
 }
 
+
 /* BUTTON */
 .btn {
   display: inline-block;
@@ -117,6 +118,7 @@ body {
   margin: 0 0 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: #646cff;
 }
 .intro {
   color: var(--muted);
@@ -141,33 +143,51 @@ body {
 .sponsors {
   margin-bottom: 2rem;
 }
+
 .sponsor-logos {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: center;
-}
-.sponsor-logos img {
-  height: 380px;
-  object-fit: cover;
-  border-radius: 6px;
-  background: var(--glass);
-  padding: 8px;
+  flex-wrap: wrap;
 }
 
+.sponsor-logos img {
+  
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .sponsor-logos {
+    flex-direction: column;
+  }
+}
+
+
+
 /* GALLERY */
-.gallery-grid {
+.gallery-grid, .sponsor-logos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
   justify-items: center;
 }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
 .gallery-grid img {
   width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 8px;
 }
+
 .card {
   background: var(--card);
   padding: 0;
@@ -394,4 +414,10 @@ button[type='submit'] {
   height: 70vh;
   border: 0;
   display: block;
+}
+
+@media (max-width: 874px) {
+  .gallery-grid img {
+    object-position: center 65%;
+  }
 }

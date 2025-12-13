@@ -29,7 +29,7 @@
 
           <!-- Card 1 -->
           <div class="weapon-card">
-            <img src="#" alt="Chevrolet Camaro ZL1">
+            <img src="/src/pictures/hypercar.png" alt="Chevrolet Camaro ZL1">
             <h3>The Hypercars</h3>
             <p>
               Ferrari 499P, Toyota GR010, Porsche 963 — the fastest, most advanced race cars on earth.
@@ -39,7 +39,7 @@
 
           <!-- Card 2 -->
           <div class="weapon-card">
-            <img src="#" alt="Ford Mustang Dark Horse">
+            <img src="/src/pictures/gt2lmu.png" alt="Ford Mustang Dark Horse">
             <h3>The LMP2s</h3>
             <p>
              The Oreca 07. A brutal, equal-spec class with no electronic aids. Raw racing. Driver versus driver.
@@ -49,7 +49,7 @@
 
           <!-- Card 3 -->
           <div class="weapon-card">
-            <img src="#" alt="Toyota Camry XSE">
+            <img src="/src/pictures/gt3lmu.png" alt="Toyota Camry XSE">
             <h3>The LMGT3s</h3>
             <p>
               McLaren, Aston Martin, BMW. Heavier, mechanical grip–based GT machinery. You fight your own war while

@@ -29,7 +29,7 @@
 
           <!-- Card 1: Sledgehammers -->
           <div class="weapon-card">
-            <img src="#" alt="Mercedes AMG / BMW M4">
+            <img src="/src/pictures/mercedes.png" alt="Mercedes AMG / BMW M4">
             <h3>The Sledgehammers</h3>
             <p>
               The front-engined beasts like the Mercedes-AMG or BMW M4. Stable, curb-devouring powerhouses with brutal
@@ -39,7 +39,7 @@
 
           <!-- Card 2: Scalpels -->
           <div class="weapon-card">
-            <img src="#" alt="Ferrari 296 / McLaren 720S">
+            <img src="/src/pictures/McLaren.png" alt="Ferrari 296 / McLaren 720S">
             <h3>The Scalpels</h3>
             <p>
               The mid-engined exotics — Ferrari 296, McLaren 720S. Sharp, agile, and demanding. These cars reward
@@ -49,7 +49,7 @@
 
           <!-- Card 3: Anomalies -->
           <div class="weapon-card">
-            <img src="#" alt="Porsche 992 GT3R">
+            <img src="/src/pictures/Porsche.png" alt="Porsche 992 GT3R">
             <h3>The Anomalies</h3>
             <p>
               The rear-engined icon: Porsche 992. A physics-defying machine that rockets out of corners if mastered.

@@ -31,7 +31,7 @@
 
           <!-- GT2 Card -->
           <div class="weapon-card">
-            <img src="#" alt="GT2 Cars">
+            <img src="/src/pictures/Screenshot_2025-12-08_004221.png" alt="GT2 Cars">
             <h3>The Powerhouses (GT2)</h3>
             <p>
               Maserati MC20 GT2, Porsche 911 GT2 RS CS, Audi R8 LMS GT2. Over 700hp monsters with brutal acceleration
@@ -42,7 +42,7 @@
 
           <!-- GT4 Card -->
           <div class="weapon-card">
-            <img src="#" alt="GT4 Cars">
+            <img src="/src/pictures/Screenshot_2025-12-08_004252.png" alt="GT4 Cars">
             <h3>The Fighters (GT4)</h3>
             <p>
               Porsche Cayman, Alpine A110, BMW M4 GT4. Lightweight, momentum-based machines that reward smooth inputs.

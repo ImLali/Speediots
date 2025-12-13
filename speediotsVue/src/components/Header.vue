@@ -31,7 +31,7 @@
             <RouterLink to="/gt4">GT2&4</RouterLink>
             <RouterLink to="/wec">LMU</RouterLink>
           </div>
-          <RouterLink to="/login" class="nav-login">Log in</RouterLink>
+          <RouterLink to="/login" class="nav-login btn primary">Log in</RouterLink>
           <RouterLink to="/register" class="btn primary">Register</RouterLink>
         </div>
       </nav>
@@ -71,6 +71,7 @@
     align-items:center;
     height:1.5rem;
     line-height:.9;
+    color: #646cff;
   }
 
   .nav-toggle {
@@ -90,6 +91,10 @@
     background: #fff;
     border-radius: 4px;
     transition: 0.3s;
+  }
+
+  .nav-login {
+    margin: 5px;
   }
 
   @media(max-width: 1050px) {

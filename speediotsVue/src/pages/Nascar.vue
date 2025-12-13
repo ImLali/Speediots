@@ -22,7 +22,7 @@
 
     <!-- Card 1 -->
     <div class="weapon-card">
-      <img src="#" alt="Chevrolet Camaro ZL1">
+      <img src="/src/pictures/nascar.png" alt="Chevrolet Camaro ZL1">
       <h3>Chevrolet Camaro ZL1</h3>
       <p>
         The Bowtie brigade. Aggressive, sharp, iconic — driving the ZL1 means
@@ -32,7 +32,7 @@
 
     <!-- Card 2 -->
     <div class="weapon-card">
-      <img src="#" alt="Ford Mustang Dark Horse">
+      <img src="/src/pictures/nascar2.png" alt="Ford Mustang Dark Horse">
       <h3>Ford Mustang Dark Horse</h3>
       <p>
         Raw, unfiltered muscle. Built for drivers who refuse to back down.
@@ -41,7 +41,7 @@
 
     <!-- Card 3 -->
     <div class="weapon-card">
-      <img src="#" alt="Toyota Camry XSE">
+      <img src="/src/pictures/toyota.jpg" alt="Toyota Camry XSE">
       <h3>Toyota Camry XSE</h3>
       <p>
         The disruptor. Calm on the streets, deadly on the track. Precision weapon for stealing trophies.

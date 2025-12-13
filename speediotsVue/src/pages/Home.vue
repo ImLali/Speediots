@@ -25,9 +25,9 @@
     <section class="gallery">
       <h2>Gallery</h2>
       <div class="gallery-grid">
-        <div class="card"><img src="https://picsum.photos/seed/g1/600/400" alt="race1"></div>
-        <div class="card"><img src="https://picsum.photos/seed/g2/600/400" alt="race2"></div>
-        <div class="card"><img src="https://picsum.photos/seed/g3/600/400" alt="race3"></div>
+        <div class="card"><img src="/src/pictures/Screenshot_2025-12-08_004129.png" alt="race1"></div>
+        <div class="card"><img src="/src/pictures/Screenshot_2025-12-08_004221.png" alt="race2"></div>
+        <div class="card"><img src="/src/pictures/Screenshot_2025-12-08_004252.png" alt="race3"></div>
       </div>
     </section>
     <section class="videos-section">
